@@ -1,6 +1,6 @@
 <div align="center">
 
-<img alt="gif-header" src="https://aemebe.weebly.com/uploads/4/7/1/4/47145535/tumblr-oujnx1jo9i1r9ndy3o1-500_orig.gif" width="350px"/>
+<img alt="gif-header" src="https://static.wixstatic.com/media/d1d44b_9c0e69023b054d2e98efa5bd3347a3f6~mv2.gif" width="350px"/>
 
 <h2>✨ Auto Earn Pre ✨</h2>
 
