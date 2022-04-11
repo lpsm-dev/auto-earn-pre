@@ -10,7 +10,7 @@
 
 ---
 
-<img alt="gif-about" src="https://i.pinimg.com/originals/8b/e4/ef/8be4efc0a8e5bc4903aae00db82cb982.gif" width="450px" float="center"/>
+<img alt="gif-about" src="https://miro.medium.com/max/1400/1*LLg6PoBPEur45DlxqXRRlQ.gif" width="450px" float="center"/>
 
 <p>✨ A simple Python script that help you earn Presearch Tokens ✨</p>
 
