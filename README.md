@@ -12,7 +12,7 @@
 
 <img alt="gif-about" src="https://miro.medium.com/max/1400/1*LLg6PoBPEur45DlxqXRRlQ.gif" width="450px" float="center"/>
 
-<p>✨ A simple script to help you earn [Presearch](https://docs.presearch.org/) Token ✨</p>
+<p>✨ A simple script to help you earn Presearch Token ✨</p>
 
 <p>
   <a href="#getting-started">Getting Started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -28,6 +28,12 @@
 ## ➤ Description <a name = "description"></a>
 
 Presearch is a decentralized search engine powered by the community. Search privately, receive better results and get rewarded with the Presearch decentralized search engine, powered by blockchain technology.
+
+## ➤ Requirements <a name = "requirements"></a>
+
+```bash
+pip install -r requirements.txt
+```
 
 ## ➤ Versioning <a name = "versioning"></a>
 
