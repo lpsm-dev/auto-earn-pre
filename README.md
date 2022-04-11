@@ -1,0 +1,42 @@
+<div align="center">
+
+<img alt="gif-header" src="https://aemebe.weebly.com/uploads/4/7/1/4/47145535/tumblr-oujnx1jo9i1r9ndy3o1-500_orig.gif" width="350px"/>
+
+<h2>✨ Auto Earn Pre ✨</h2>
+
+[![Semantic Release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/lpmatos/auto-earn-pre)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](https://github.com/lpmatos/auto-earn-pre)
+[![GitHub repo size](https://img.shields.io/github/repo-size/lpmatos/auto-earn-pre)](https://github.com/lpmatos/auto-earn-pre)
+
+---
+
+<img alt="gif-about" src="https://i.pinimg.com/originals/8b/e4/ef/8be4efc0a8e5bc4903aae00db82cb982.gif" width="450px" float="center"/>
+
+<p>✨ A simple Python script that help you earn Presearch Tokens ✨</p>
+
+<p>
+  <a href="#getting-started">Getting Started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#concepts">Concepts</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#demo">Demo</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#versioning">Versioning</a>
+</p>
+
+</div>
+
+---
+
+## ➤ Versioning <a name = "versioning"></a>
+
+To check the change history, please access the [**CHANGELOG.md**](CHANGELOG.md) file.
+
+## ➤ Show your support <a name = "show-your-support"></a>
+
+<div align="center">
+
+Give me a ⭐️ if this project helped you!
+
+<img alt="gif-header" src="https://www.icegif.com/wp-content/uploads/baby-yoda-bye-bye-icegif.gif" width="350px" float="center"/>
+
+Made with 💜 by [me](https://github.com/lpmatos) 👋 inspired on [readme-md-generator](https://github.com/kefranabg/readme-md-generator)
+
+</div>
