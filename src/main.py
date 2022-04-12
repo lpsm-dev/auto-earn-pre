@@ -1,9 +1,9 @@
-import time
-import pyfiglet
+import time, fire, pyfiglet
 from loguru import logger
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -13,8 +13,20 @@ class BColors:
     WARNING = "\033[93m"
 
 
-def main():
-    driver = webdriver.Chrome()
+def main(driver_type: str = "chrome",):
+
+    if driver_type == "chrome":
+      logger.debug("✨ Using chromer driver")
+      options = webdriver.ChromeOptions()
+      service = Service("./drivers/chromedriver")
+      driver = webdriver.Chrome(service=service, options=options)
+
+    if driver_type == "firefox":
+      logger.debug("✨ Using firefox driver")
+      options = webdriver.FirefoxOptions()
+      service = Service("./drivers/geckodriver")
+      driver = webdriver.Firefox(service=service, options=options)
+
     logger.debug("✨ Start Browser launched!")
     driver.get("https://engine.presearch.org/")
 
@@ -36,4 +48,4 @@ if __name__ == "__main__":
     ascii_banner = pyfiglet.figlet_format("Auto Earn Pre-search")
     print(BColors.OKCYAN + ascii_banner)
     print(BColors.WARNING + "                   by @CI Monk\n")
-    main()
+    fire.Fire(main)
