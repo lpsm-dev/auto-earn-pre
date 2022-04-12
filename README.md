@@ -25,15 +25,25 @@
 
 ---
 
+## ➤ Disclaimer <a name = "disclaimer"></a>
+
+`All risk is yours and any damages regarding any account ban will be your responsibility.`
+
 ## ➤ Description <a name = "description"></a>
 
 Presearch is a decentralized search engine powered by the community. Search privately, receive better results and get rewarded with the Presearch decentralized search engine, powered by blockchain technology.
 
 ## ➤ Requirements <a name = "requirements"></a>
 
-```bash
-pip install -r requirements.txt
-```
+- Install Python
+- Install Python Libs: `pip install -r requirements.txt`
+
+## ➤ Usage <a name = "usage"></a>
+
+### Currently works for
+
+- Google Chrome
+- Firefox
 
 ## ➤ Versioning <a name = "versioning"></a>
 
