@@ -45,6 +45,13 @@ Presearch is a decentralized search engine powered by the community. Search priv
 - Google Chrome
 - Firefox
 
+### Environments
+
+Before run the code you need to set your pre-search account credentials into your bash:
+
+- `PRESEARCH_EMAIL`
+- `PRESEARCH_PASSWORD`
+
 ## ➤ Versioning <a name = "versioning"></a>
 
 To check the change history, please access the [**CHANGELOG.md**](CHANGELOG.md) file.
