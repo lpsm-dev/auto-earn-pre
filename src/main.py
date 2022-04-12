@@ -1,4 +1,6 @@
-import time, fire, pyfiglet
+import time
+import fire
+import pyfiglet
 from loguru import logger
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -6,6 +8,8 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.firefox import GeckoDriverManager
 
 
 class BColors:
@@ -16,16 +20,16 @@ class BColors:
 def main(driver_type: str = "chrome",):
 
     if driver_type == "chrome":
-      logger.debug("✨ Using chromer driver")
-      options = webdriver.ChromeOptions()
-      service = Service("./drivers/chromedriver")
-      driver = webdriver.Chrome(service=service, options=options)
+        logger.debug("✨ Using chromer driver")
+        options = webdriver.ChromeOptions()
+        service = Service(ChromeDriverManager().install())
+        driver = webdriver.Chrome(service=service, options=options)
 
     if driver_type == "firefox":
-      logger.debug("✨ Using firefox driver")
-      options = webdriver.FirefoxOptions()
-      service = Service("./drivers/geckodriver")
-      driver = webdriver.Firefox(service=service, options=options)
+        logger.debug("✨ Using firefox driver")
+        options = webdriver.FirefoxOptions()
+        service = Service(GeckoDriverManager().install())
+        driver = webdriver.Firefox(service=service, options=options)
 
     logger.debug("✨ Start Browser launched!")
     driver.get("https://engine.presearch.org/")
