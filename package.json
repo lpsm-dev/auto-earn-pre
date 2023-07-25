@@ -1,10 +1,5 @@
 {
   "_comment":"this project is not a node.js one, package.json is just used to define some metadata",
-  "scripts":{
-    "cm":"git cz",
-    "precommit":"pre-commit run -a",
-    "secrets":"gitleaks detect --config .github/config/gitleaks.toml --verbose"
-  },
   "commitlint":{
     "extends":[
       "@commitlint/config-conventional"
@@ -24,7 +19,6 @@
     "@semantic-release/git":"10.0.1",
     "@semantic-release/github":"9.0.4",
     "@semantic-release/release-notes-generator":"11.0.4",
-    "commitizen":"4.3.0",
     "semantic-release":"19.0.5"
   }
 }
