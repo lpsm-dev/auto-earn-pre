@@ -1,0 +1,38 @@
+---
+version: "3"
+
+vars:
+  CLEAR: tput reset
+  PATH_ERROR: is not installed or correctly configured in PATH.
+  GIT_ROOT:
+    sh: git rev-parse --show-toplevel
+
+includes:
+  precommit: .github/taskfiles/pre-commit.yml
+
+tasks:
+  default:
+    silent: true
+    aliases: [commands]
+    cmds:
+    - task --list
+
+  clear:
+    cmds:
+    - sleep 0.1 && {{.CLEAR}}
+
+  gitleaks:
+    desc: Run secret-detection using gitleaks
+    preconditions:
+    - sh: "which gitleaks"
+      msg: "gitleaks {{.PATH_ERROR}}"
+    cmds:
+    - gitleaks detect --verbose  .
+
+  hadolint:
+    desc: Run dockerfile lint using hadolint
+    preconditions:
+    - sh: "which hadolint"
+      msg: "hadolint {{.PATH_ERROR}}"
+    cmds:
+    - hadolint --config {{ .GIT_ROOT }}/.gitlab/config/.hadolint.yaml Dockerfile

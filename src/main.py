@@ -1,16 +1,17 @@
 # -*- coding: utf-8 -*-
 
+import os
 import time
+
 import fire
 import pyfiglet
-import os
 from loguru import logger
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
 
@@ -51,8 +52,7 @@ def main(driver_type: str = "chrome"):
     for line in open("files/terms.txt", "r").readlines():
         logger.debug("✨ Open the Presearch.org...")
         driver.get("https://www.presearch.org/?utm_source=extcr")
-        element = WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located((By.ID, "search")))
+        element = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "search")))
         logger.info(f"👾 Searching {line.index}: {line}")
         element.send_keys(line, Keys.ENTER)
         time.sleep(10)
