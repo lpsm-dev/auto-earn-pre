@@ -63,5 +63,5 @@ def main(driver_type: str = "chrome"):
 if __name__ == "__main__":
     ascii_banner = pyfiglet.figlet_format("Auto Earn Pre-search")
     print(BColors.OKCYAN + ascii_banner)
-    print(BColors.WARNING + "                   by @CI Monk\n")
+    print(BColors.WARNING + "                   by @lpsm-dev\n")
     fire.Fire(main)
