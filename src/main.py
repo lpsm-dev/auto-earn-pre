@@ -43,59 +43,54 @@ def main(driver_type: str = "chrome"):
 
     # Configure the WebDriver based on the driver_type
     if driver_type == "chrome":
-        logger.debug("✨ Using chromer driver")
+        logger.debug("Using chromer driver")
         options = webdriver.ChromeOptions()
         options.add_argument("--disable-notifications")
-        options.add_argument(
-            "user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 10_3 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) CriOS/56.0.2924.75 Mobile/14E5239e Safari/602.1"
-        )
         if config.get_env("CI") == "true":
             options.add_argument("--headless")
         service = ChromeService(ChromeDriverManager().install())
         driver = webdriver.Chrome(service=service, options=options)
 
     if driver_type == "firefox":
-        logger.debug("✨ Using firefox driver")
+        logger.debug("Using firefox driver")
         service = FirefoxService(GeckoDriverManager().install())
         options = webdriver.FirefoxOptions()
         options.add_argument("--disable-notifications")
-        options.add_argument(
-            "user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 10_3 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) CriOS/56.0.2924.75 Mobile/14E5239e Safari/602.1"
-        )
         if config.get_env("CI") == "true":
             options.add_argument("--headless")
         driver = webdriver.Firefox(service=service, options=options)
 
-    logger.debug("✨ Start Browser launched!")
-    driver.get("https://presearch.org/")
+    logger.debug("Start Browser launched!")
+    driver.get("https://account.presearch.com/login")
 
-    # Click on the "Register or Login" link to log in
-    login_button = WebDriverWait(driver, 20).until(
-        EC.element_to_be_clickable((By.XPATH, "//*[contains(text(), 'Register or Login')]"))
-    )
-    login_button.click()
+    email_input = driver.find_element(By.XPATH, '//input[@name="email"]')
+    email_input.send_keys(email)
 
-    email_field = WebDriverWait(driver, 20).until(
-        EC.visibility_of_element_located((By.XPATH, "//input[contains(@placeholder,'Email')]"))
-    )
-    email_field.click(email)
+    password_input = driver.find_element(By.XPATH, '//input[@name="password"]')
+    password_input.send_keys(password)
 
-    password_field = WebDriverWait(driver, 20).until(
-        EC.visibility_of_element_located((By.XPATH, "//input[@placeholder='Password']"))
-    )
-    password_field.click(password)
+    # Click in "Remember Me" checkbox
+    driver.find_element(By.XPATH, '//input[@name="remember"]').click()
 
-    # Wait for the user to enter the captcha and 2FA (two-factor authentication)
-    input("Enter with the captcha + 2Auth and press [ENTER]: ")
+    # Click in the captcha
+    driver.find_element(By.XPATH, '//*[@id="login-form"]/form/div[3]/div[2]/div/iframe').click()
+
+    # Wait for the user to resolve the captcha
+    input("Resolve the captcha and press [ENTER]: ")
+
+    # Click in Login button
+    driver.find_element(By.XPATH, '//*[@id="login-form"]/form/div[3]/div[3]/button').click()
+
+    # Wait for the user resolve the 2FA (two-factor authentication)
+    input("Resolve the captcha + 2Auth and press [ENTER]: ")
 
     # Loop through the lines in the "files/terms.txt" file and perform search actions on Presearch.org
-    for line in open("files/terms.txt", "r").readlines():
-        logger.debug("✨ Open the Presearch.org...")
-        driver.get("https://www.presearch.org/?utm_source=extcr")
-        element = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "search")))
-        logger.info(f"👾 Searching {line.index}: {line}")
+    for line in open(os.path.dirname(__file__) + "/files/terms.txt", "r").readlines():
+        logger.info(f"Searching: {line}")
+        driver.get("https://www.presearch.org")
+        element = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '//input[@name="q"]')))
         element.send_keys(line, Keys.ENTER)
-        time.sleep(10)
+        time.sleep(5)
 
     # Close the WebDriver
     driver.close()
