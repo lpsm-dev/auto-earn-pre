@@ -2,4 +2,4 @@ fire==0.5.0
 loguru==0.7.0
 selenium==4.10.0
 pyfiglet==0.8.post1
-webdriver-manager==4.0.0
+webdriver_manager==4.0.0

@@ -17,8 +17,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
+from selenium.webdriver.chrome.service import Service as ChromiumService
 
-# Import custom configuration module
 from settings.config import Config
 from settings.constans import BColors
 
@@ -56,6 +56,15 @@ def main(driver_type: str = "chrome"):
         if config.get_env("CI") == "true":
             options.add_argument("--headless")
         driver = webdriver.Firefox(service=service, options=options)
+
+    if driver_type == "chromium":
+        logger.debug("Using chromium driver")
+        options = webdriver.ChromeOptions()
+        options.add_argument("--disable-notifications")
+        if config.get_env("CI") == "true":
+            options.add_argument("--headless")
+        service = ChromiumService(ChromeDriverManager().install())
+        driver = webdriver.Chrome(service=service, options=options)
 
     logger.debug("Start Browser launched!")
     driver.get("https://account.presearch.com/login")
