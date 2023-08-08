@@ -25,6 +25,7 @@ from settings.constans import BColors
 # Initialize the configuration object
 config = Config()
 
+
 # Define the main function with an optional argument for the driver_type
 def main(driver_type: str = "chrome"):
     """
@@ -90,6 +91,7 @@ def main(driver_type: str = "chrome"):
 
     # Close the WebDriver
     driver.close()
+
 
 # Execute the main function when this script is run directly
 if __name__ == "__main__":
