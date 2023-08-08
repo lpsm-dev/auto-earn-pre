@@ -18,7 +18,8 @@ repos:
   rev: v8.17.0
   hooks:
   - id: gitleaks
-    args: ["--verbose"]
+    args:
+    - --verbose
 - repo: https://github.com/commitizen-tools/commitizen
   rev: 3.5.3
   hooks:
@@ -38,7 +39,8 @@ repos:
   rev: v2.12.1-beta
   hooks:
   - id: hadolint
-    args: ["--config", ".github/config/.hadolint.yaml"]
+    args: 
+    - --config=.github/config/.hadolint.yaml
 - repo: https://github.com/psf/black
   rev: 23.7.0
   hooks:
