@@ -47,7 +47,7 @@ Create a dotenv file and run `direnv allow` or just setup this variables on your
 |----------------------------------|--------------------------------------------------------------------------|------------------------|
 | PRESEARCH_EMAIL                  | Pre-Search Account Email                                                 | ""                     |
 | PRESEARCH_PASSWORD               | Pre-Search Account Passoword                                             | ""                     |
-| PRESEARCH_2_AUTH                 | Enable if you have 2-Auth enable                                        | "false"                     |
+| PRESEARCH_2_AUTH                 | Enable if you have 2-Auth enable ('false' or 'true')                                       | "false"                     |
 
 **Install**
 
