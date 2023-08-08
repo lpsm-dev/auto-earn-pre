@@ -78,8 +78,9 @@ def main(driver_type: str = "chrome"):
     # Click in Login button
     driver.find_element(By.XPATH, '//*[@id="login-form"]/form/div[3]/div[3]/button').click()
 
-    # Wait for the user resolve the 2FA (two-factor authentication)
-    input("Resolve the captcha + 2Auth and press [ENTER]: ")
+    if os.environ.get("PRESEARCH_2_AUTH") == "true":
+      # Wait for the user resolve the 2FA (two-factor authentication)
+      input("Resolve the captcha + 2Auth and press [ENTER]: ")
 
     # Loop through the lines in the "files/terms.txt" file and perform search actions on Presearch.org
     for line in open(os.path.dirname(__file__) + "/files/terms.txt", "r").readlines():

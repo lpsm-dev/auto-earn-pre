@@ -45,8 +45,9 @@ Create a dotenv file and run `direnv allow` or just setup this variables on your
 
 | Variable                         | Description                                                              | Default                |
 |----------------------------------|--------------------------------------------------------------------------|------------------------|
-| PRESEARCH_EMAIL                        | Pre-Search Account Email                                                 | "" |
-| PRESEARCH_PASSWORD                     | Pre-Search Account Passoword   | ""                   |
+| PRESEARCH_EMAIL                  | Pre-Search Account Email                                                 | ""                     |
+| PRESEARCH_PASSWORD               | Pre-Search Account Passoword                                             | ""                     |
+| PRESEARCH_2_AUTH                 | Enable if you have 2-Auth enable                                        | "false"                     |
 
 **Install**
 
@@ -65,6 +66,8 @@ Run this to execute this project using `Python`.
 ```python
 python src/main.py 
 ```
+
+When executing the code, you will need to interact with the Pre-search and with the terminal to find out if you have completed the captcha and the 2-Auth process.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
