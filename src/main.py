@@ -79,6 +79,7 @@ def main(driver_type: str = "chrome"):
     driver.find_element(By.XPATH, '//*[@id="login-form"]/form/div[3]/div[3]/button').click()
 
     if os.environ.get("PRESEARCH_2_AUTH") == "true":
+      logger.debug("Enable 2-Auth check")
       # Wait for the user resolve the 2FA (two-factor authentication)
       input("Resolve the captcha + 2Auth and press [ENTER]: ")
 
