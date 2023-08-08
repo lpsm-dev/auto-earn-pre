@@ -24,15 +24,15 @@ tasks:
   gitleaks:
     desc: Run secret-detection using gitleaks
     preconditions:
-    - sh: "which gitleaks"
-      msg: "gitleaks {{.PATH_ERROR}}"
+    - sh: 'which gitleaks'
+      msg: 'gitleaks {{.PATH_ERROR}}'
     cmds:
     - gitleaks detect --verbose  .
 
   hadolint:
     desc: Run dockerfile lint using hadolint
     preconditions:
-    - sh: "which hadolint"
-      msg: "hadolint {{.PATH_ERROR}}"
+    - sh: 'which hadolint'
+      msg: 'hadolint {{.PATH_ERROR}}'
     cmds:
     - hadolint --config {{ .GIT_ROOT }}/.gitlab/config/.hadolint.yaml Dockerfile
