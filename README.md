@@ -58,7 +58,7 @@ pip install -r requirements.txt
 
 **Usage**
 
-To run the project, execute the following command:
+Run this to execute this project using `Python`.
 
 ```python
 python src/main.py 
