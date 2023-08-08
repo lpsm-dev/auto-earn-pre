@@ -32,32 +32,50 @@
 
 Presearch is a decentralized search engine powered by the community. Search privately, receive better results and get rewarded with the Presearch decentralized search engine, powered by blockchain technology.
 
-## ➤ Requirements <a name = "requirements"></a>
+## ➤ Getting Started <a name="#-getting-started"></a>
 
-- Install Python
-- Install Python Libs: `pip install -r requirements.txt`
+**Prerequisites**
 
-## ➤ Usage <a name = "usage"></a>
+* Python + PIP
 
-### Currently works for
+**Setup**
 
-- Google Chrome
-- Firefox
+Create a dotenv file and run `direnv allow`.
 
-### Environments
+| Variable                         | Description                                                              | Default                |
+|----------------------------------|--------------------------------------------------------------------------|------------------------|
+| PRESEARCH_EMAIL                        | Pre-Search Account Email                                                 | "" |
+| PRESEARCH_PASSWORD                     | Pre-Search Account Passoword   | ""                   |
 
-Before run the code you need to set your pre-search account credentials into your bash:
+**Install**
 
-- `PRESEARCH_EMAIL`
-- `PRESEARCH_PASSWORD`
+Install this project with:
+
+```bash
+pip install -r requirements.txt
+```
+
+**Usage**
+
+To run the project, execute the following command:
+
+```python
+python src/main.py 
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## ➤ Versioning <a name="#-versioning"></a>
 
 To check the change history, please access the [**CHANGELOG.md**](CHANGELOG.md) file.
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## ➤ Troubleshooting <a name="#-troubleshooting"></a>
 
 If you have any problems, open an issue in this project.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## ➤ Show your support <a name="-show-your-support"></a>
 
@@ -68,5 +86,3 @@ Give me a ⭐️ if this project helped you!
 <img alt="gif-footer" src="https://github.com/lpsm-dev/lpsm-dev/blob/main/.github/assets/yoda.gif" width="225"/>
 
 Made with 💜 by [me](https://github.com/lpsm-dev) 👋 inspired on [readme-md-generator](https://github.com/kefranabg/readme-md-generator)
-
-</div>
