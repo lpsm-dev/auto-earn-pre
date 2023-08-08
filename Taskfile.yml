@@ -8,6 +8,7 @@ vars:
     sh: git rev-parse --show-toplevel
 
 includes:
+  d: .github/taskfiles/docker.yml
   precommit: .github/taskfiles/pre-commit.yml
 
 tasks:
