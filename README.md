@@ -50,7 +50,7 @@ Create a dotenv file and run `direnv allow` or just setup this variables on your
 
 **Install**
 
-Install this project with:
+Run this to install all libs needed in this project:
 
 ```bash
 pip install -r requirements.txt
