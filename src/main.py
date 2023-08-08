@@ -20,11 +20,7 @@ from webdriver_manager.firefox import GeckoDriverManager
 
 # Import custom configuration module
 from settings.config import Config
-
-# Define a class to store color codes for formatting console outputs
-class BColors:
-    OKCYAN = "\033[96m"
-    WARNING = "\033[93m"
+from settings.constans import BColors
 
 # Initialize the configuration object
 config = Config()
