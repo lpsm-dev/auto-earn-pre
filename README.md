@@ -1,4 +1,7 @@
+<!-- BEGIN_TF_DOCS -->
 <div align="center">
+
+<a name="readme-top"></a>
 
 <img alt="gif-header" src="https://github.com/lpsm-dev/lpsm-dev/blob/main/.github/assets/gif-header.gif" width="225"/>
 
@@ -22,11 +25,11 @@
 
 </div>
 
----
+<h3>DISCAIMER</h3>
 
-## ➤ Disclaimer <a name = "disclaimer"></a>
+`🚨 The entire risk of this project is yours 🚨`
 
-`All risk is yours and any damages regarding any account ban will be your responsibility.`
+</div>
 
 ## ➤ Description <a name = "description"></a>
 
