@@ -10,12 +10,3 @@ tasks:
     cmds:
     - docker image build -t earn-pre:latest .
     - docker images
-
-  run:
-    desc: Run docker container
-    preconditions:
-    - sh: "which docker"
-      msg: "kind {{.PATH_ERROR}}"
-    cmds:
-    - docker run -d --rm earn-pre:latest
-    - docker ps
