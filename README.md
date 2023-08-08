@@ -41,7 +41,7 @@ Presearch is a decentralized search engine powered by the community. Search priv
 
 **Setup**
 
-Create a dotenv file and run `direnv allow`.
+Create a dotenv file and run `direnv allow` or just setup this variables on your terminal.
 
 | Variable                         | Description                                                              | Default                |
 |----------------------------------|--------------------------------------------------------------------------|------------------------|
