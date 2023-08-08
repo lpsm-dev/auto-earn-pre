@@ -23,8 +23,6 @@
   <a href="#versioning">Versioning</a>
 </p>
 
-</div>
-
 <h3>DISCAIMER</h3>
 
 `🚨 The entire risk of this project is yours 🚨`
