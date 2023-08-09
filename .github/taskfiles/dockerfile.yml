@@ -1,12 +1,12 @@
 ---
-version: "3"
+version: '3'
 
 tasks:
   build:
     desc: Build docker image
     preconditions:
-    - sh: "which docker"
-      msg: "kind {{.PATH_ERROR}}"
+    - sh: 'which docker'
+      msg: 'kind {{.PATH_ERROR}}'
     cmds:
     - docker image build -t earn-pre:latest .
     - docker images
