@@ -57,11 +57,11 @@ Run this to install all libs needed in this project:
 pip install -r requirements.txt
 ```
 
-The `requirements.txt`` file should list all Python libs that this code use.
+The `requirements.txt` file should list all Python libs that this code use.
 
 **Usage**
 
-Run this to execute this project using `Python`.
+Run this to exec python code:
 
 ```python
 python src/main.py 
