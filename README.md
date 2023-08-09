@@ -82,7 +82,7 @@ To check the change history, please access the [**CHANGELOG.md**](CHANGELOG.md) 
 
 ## ➤ Troubleshooting <a name="#-troubleshooting"></a>
 
-If you have any problems, open an issue in this project.
+If you have any problems, [open an issue in this project](https://github.com/lpsm-dev/auto-earn-pre/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
