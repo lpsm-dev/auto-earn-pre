@@ -35,6 +35,8 @@ Presearch is a decentralized search engine powered by the community. Search priv
 
 ## ➤ Getting Started <a name="#-getting-started"></a>
 
+**Prerequisites**
+
 To development:
 
 * Pre-Commit, Task, GitLeaks, Hadolint, Direnv
